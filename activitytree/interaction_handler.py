@@ -200,7 +200,7 @@ import xml.etree.ElementTree as ET
 from django.conf import settings
 
 con = psycopg2.connect(database=settings.DATABASES['default']['NAME'],user=settings.DATABASES['default']['USER'],
-                       host=settings.DATABASES['default']['HOST'],password=settings.DATABASES['default']['PASSWORD'],
+                       host=settings.DATABASES['default']['HOST'],port =settings.DATABASES['default']['PORT'], password=settings.DATABASES['default']['PASSWORD'],
                        )
 
 RECORDS = {}

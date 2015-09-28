@@ -13,7 +13,7 @@ if __name__ == "__main__":
     application = get_wsgi_application()
 
 con = psycopg2.connect(database=settings.DATABASES['default']['NAME'],user=settings.DATABASES['default']['USER'],
-                       host=settings.DATABASES['default']['HOST'],password=settings.DATABASES['default']['PASSWORD'],
+                       host=settings.DATABASES['default']['HOST'], port =settings.DATABASES['default']['PORT'], password=settings.DATABASES['default']['PASSWORD'],
                        )
 print con
 
